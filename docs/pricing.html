@@ -1,22 +1,38 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Outlinedesk pricing</title><meta name="description" content="Solo, student, team and studio plans for Outlinedesk, in Indian rupees."><meta name="color-scheme" content="light dark">
-<meta property="og:title" content="Outlinedesk pricing"><meta property="og:description" content="Solo, student, team and studio plans for Outlinedesk, in Indian rupees.">
-<link rel="stylesheet" href="style.css"></head>
+<title>Outlinedesk pricing</title><meta name="description" content="Pick a plan type, set your team size and see the exact price. Solo, student, team, studio, school and custom plans for Outlinedesk, in Indian rupees."><meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Outlinedesk pricing"><meta property="og:description" content="Pick a plan type, set your team size and see the exact price, in Indian rupees.">
+<link rel="stylesheet" href="style.css"><script src="pricing.js" defer></script></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap bar"><a class="brand" href="index.html"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Outlinedesk</a>
 <nav aria-label="Main"><a href="index.html">Home</a><a href="pricing.html" aria-current="page">Pricing</a><a href="download.html">Download</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav></div></header>
 <main id="main">
-<section class="wrap page-head"><h1>Pricing</h1><p class="lead">Subscriptions in Indian rupees. Every plan starts with a free 27-day trial of everything. No lifetime plan.</p></section>
-<section class="wrap plans">
-<article class="plan"><h2>Solo</h2><p class="price">&#8377;149 <span>/ month</span></p><p>or <strong>&#8377;1,599 / year</strong> (about one month free).</p><ul><li>Every feature, every export</li><li>Cancel any time</li></ul><p class="quiet">For freelancers and solo creators.</p></article>
-<article class="plan"><h2>Student</h2><p class="price">&#8377;299 <span>/ year</span></p><p>Launch-year price for verified students, single user, all features. Limited to the first 500 students; then &#8377;649 a year.</p><ul><li>Verified once by college e-mail or student ID</li><li>Keep the price while you are enrolled (up to 3 years)</li></ul></article>
-<article class="plan featured"><h2>Team</h2><p class="price">&#8377;1,999 <span>/ month</span></p><p>or <strong>&#8377;21,999 / year</strong> (about one month free).</p><p>Up to 8 seats. Extra seat &#8377;250 a month (&#8377;2,750 a year).</p></article>
-<article class="plan"><h2>Studio</h2><p class="price">&#8377;3,999 <span>/ month</span></p><p>or <strong>&#8377;43,999 / year</strong> (about one month free).</p><p>Up to 25 seats. Extra seat &#8377;250 a month (&#8377;2,750 a year).</p></article>
-<article class="plan"><h2>Large</h2><p class="price">&#8377;7,999 <span>/ month</span></p><p>or <strong>&#8377;87,999 / year</strong> (about one month free).</p><p>Up to 50 seats. Extra seat &#8377;250 a month (&#8377;2,750 a year).</p></article>
-<article class="plan"><h2>School or lab</h2><p class="price">&#8377;1,999 <span>/ month</span></p><p>or <strong>&#8377;21,999 / year</strong> (about one month free).</p><p>Up to 100 students for classes and labs.</p></article>
-<article class="plan"><h2>Custom</h2><p class="price">&#8377;150 <span>/ seat / month</span></p><p>More than 50 seats or special terms. Minimum &#8377;9,999 a month. Write to us for a quote.</p></article>
+<section class="wrap page-head rise"><h1>Pricing</h1><p class="lead">Pick the kind of plan that fits, set your team size, and see the exact price. Every plan starts with a free 27-day trial of everything. No lifetime plan.</p>
+<div class="toggle" role="group" aria-label="Billing period"><button type="button" data-period="monthly" aria-pressed="true">Monthly</button><button type="button" data-period="yearly" aria-pressed="false">Yearly <small>saves about a month</small></button></div></section>
+<section class="wrap types">
+<article class="ptype rise"><h2>Just me</h2><p class="who">A freelancer, or one person on a project.</p>
+<p class="big"><span id="solo-price">&#8377;149</span> <span class="per" id="solo-per">a month</span></p><p class="quiet" id="solo-save">Pay yearly and save about one month.</p>
+<ul class="tick"><li>Solo plan, one seat</li><li>Every feature and every export</li><li>Cancel any time on monthly</li></ul>
+<div class="sub"><h3>Student?</h3><p>&#8377;299 a year for one verified student. It is the launch price, and becomes &#8377;649 a year after the launch year. Students who join at the launch price keep it while they are enrolled, up to three years.</p></div></article>
+<article class="ptype ptype-main rise" id="card-team" data-plan="team"><h2>My team or studio</h2><p class="who">How many people will edit plans?</p>
+<div class="seats"><label for="seats-range" class="sr">Number of people</label><input id="seats-range" type="range" min="1" max="200" value="5" aria-describedby="seats-num"><output id="seats-num" for="seats-range">5 people</output></div>
+<div class="chips" role="group" aria-label="Common team sizes"><button type="button" data-seats="1">1</button><button type="button" data-seats="3">3</button><button type="button" data-seats="5" aria-pressed="true">5</button><button type="button" data-seats="8">8</button><button type="button" data-seats="12">12</button><button type="button" data-seats="25">25</button><button type="button" data-seats="50">50</button><button type="button" data-seats="80">80</button></div>
+<div class="rec" aria-live="polite"><p class="recname" id="rec-name">Team plan</p><p class="big"><span id="rec-price">&#8377;1,999</span> <span class="per" id="rec-per">a month</span></p><p id="rec-note">8 seats included.</p><p class="quiet" id="rec-month"></p><p class="quiet" id="rec-alt"></p></div>
+<p class="fine">The page picks the cheapest plan for your size. If you grow later, you pay only the difference for the rest of the period.</p></article>
+<article class="ptype rise"><h2>A school, or something bigger</h2><p class="who">Classes and labs, or more than 50 seats.</p>
+<p class="big"><span id="school-price">&#8377;1,999</span> <span class="per" id="school-per">a month</span></p><p class="quiet">School or lab plan, up to 100 students.</p>
+<div class="sub"><h3>Custom</h3><p>More than 50 seats, or special terms: &#8377;150 per seat a month, with a minimum of &#8377;9,999. Setup, training and custom work are quoted separately. Write to <a href="mailto:atharva.patil.cg@gmail.com">atharva.patil.cg@gmail.com</a>.</p></div></article>
 </section>
+<section class="wrap full"><details class="fulllist"><summary>Full price list</summary>
+<div class="tw"><table><thead><tr><th scope="col">Plan</th><th scope="col">Seats</th><th scope="col">Per month</th><th scope="col">Per year</th></tr></thead><tbody>
+<tr><th scope="row">Solo</th><td>1</td><td>&#8377;149</td><td>&#8377;1,599</td></tr>
+<tr><th scope="row">Team</th><td>up to 8</td><td>&#8377;1,999</td><td>&#8377;21,999</td></tr>
+<tr><th scope="row">Studio</th><td>up to 25</td><td>&#8377;3,999</td><td>&#8377;43,999</td></tr>
+<tr><th scope="row">Large</th><td>up to 50</td><td>&#8377;7,999</td><td>&#8377;87,999</td></tr>
+<tr><th scope="row">School or lab</th><td>up to 100 students</td><td>&#8377;1,999</td><td>&#8377;21,999</td></tr>
+<tr><th scope="row">Student</th><td>1</td><td>not offered</td><td>&#8377;299, then &#8377;649 after the launch year</td></tr>
+<tr><th scope="row">Custom</th><td>more than 50</td><td>&#8377;150 per seat, minimum &#8377;9,999</td><td>11 times the monthly price</td></tr>
+</tbody></table></div><p class="quiet">Extra seats on Team, Studio and Large cost &#8377;250 a month or &#8377;2,750 a year each.</p></details></section>
 <section class="wrap two"><div><h2>What every plan includes</h2><ul><li>A free 27-day trial of everything before you pay.</li><li>All updates for the term. After a plan ends, projects stay readable and exportable (a 7-day grace, 3 days on monthly plans).</li><li>E-mail support is free for your first year; after that it is an optional add-on (&#8377;99 Solo, &#8377;499 Team, &#8377;999 Studio, &#8377;1,999 Large a month). Priority support (4-hour reply) is &#8377;999 a month on top.</li><li>14-day refund on your first payment, no questions asked.</li><li>Founder price lock: if you start within the first 12 months after launch, your plan price stays the same for 24 months.</li></ul></div>
 <div><h2>Setup and custom work</h2><ul><li>Quick setup &#8377;4,999 once</li><li>Studio setup &#8377;14,999 once</li><li>Pipeline workshop &#8377;7,500 per half day</li><li>Custom development &#8377;2,500 an hour or &#8377;15,000 a day</li></ul><p class="quiet">Prices in Indian rupees, fixed for the first 12 months after launch.</p></div></section>
 <section class="wrap two">
@@ -36,4 +52,4 @@
 <tr><td>Renewing on time</td><td>Your price is locked while you keep renewing.</td></tr></tbody></table></div>
 </section>
 </main>
-<footer class="foot"><div class="wrap cols"><p>Outlinedesk is made by <a href="https://atharvapatil.tech">Atharva Patil</a>, P4inz Interactive Labs, Navi Mumbai. <a href="https://github.com/p4inz-code">GitHub</a> &middot; <a href="https://www.linkedin.com/in/p4inz">LinkedIn</a></p><p class="quiet">The product name is provisional. This site uses no cookies, trackers or scripts.</p></div></footer></body></html>
+<footer class="foot"><div class="wrap cols"><p>Outlinedesk is made by <a href="https://atharvapatil.tech">Atharva Patil</a>, P4inz Interactive Labs, Navi Mumbai. <a href="https://github.com/p4inz-code">GitHub</a> &middot; <a href="https://www.linkedin.com/in/p4inz">LinkedIn</a></p><p class="quiet">No cookies and no trackers. The price calculator is one small script on this page that sends nothing anywhere.</p></div></footer></body></html>

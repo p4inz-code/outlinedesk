@@ -147,3 +147,43 @@ details p{margin:0 0 16px 20px;color:var(--muted)}
 .gallery{padding-bottom:clamp(40px,6vw,80px)}
 .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px}
 .gal figure{margin:0}.gal .wide{grid-column:1 / -1}
+
+/* pricing: plan types, seat slider, motion. Motion is short and switched off for people who ask for less of it. */
+.toggle{display:inline-flex;border:1px solid var(--line-strong);border-radius:8px;overflow:hidden;margin-top:8px;background:var(--panel)}
+.toggle button{appearance:none;border:0;background:transparent;color:var(--text);font:500 15px/1 var(--font);padding:12px 20px;min-height:44px;cursor:pointer;transition:background .18s,color .18s}
+.toggle button+button{border-left:1px solid var(--line-strong)}
+.toggle button small{font-weight:400;color:var(--muted);margin-left:6px}
+.toggle button:hover{background:var(--fill)}
+.toggle button[aria-pressed="true"]{background:var(--accent-btn,var(--accent));color:var(--on-accent)}
+.toggle button[aria-pressed="true"] small{color:inherit;opacity:.85}
+.types{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;padding-bottom:clamp(40px,6vw,72px);align-items:stretch}
+.ptype{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s}
+.ptype:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--line-strong)}
+.ptype h2{margin:0}.ptype .who{margin:0;color:var(--muted)}
+.ptype-main{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.big{font:600 34px/1.15 var(--mono);margin:4px 0 0;letter-spacing:-.02em}
+.big .per{font:400 15px var(--font);color:var(--muted);letter-spacing:0}
+.tick{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.tick li{padding-left:22px;position:relative}
+.tick li::before{content:"";position:absolute;left:2px;top:.5em;width:10px;height:6px;border-left:2px solid var(--done);border-bottom:2px solid var(--done);transform:rotate(-45deg)}
+.sub{border-top:1px solid var(--line);padding-top:12px;margin-top:auto}.sub h3{margin:0 0 4px;font-size:15px}.sub p{margin:0;color:var(--muted);font-size:15px}
+.seats{display:grid;gap:8px}.seats output{font:600 18px var(--mono)}
+.sr{position:absolute;left:-999px}
+input[type=range]{width:100%;height:28px;accent-color:var(--accent);cursor:pointer;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{appearance:none;min-width:44px;min-height:36px;padding:0 12px;border:1px solid var(--line-strong);border-radius:999px;background:transparent;color:var(--text);font:500 14px var(--mono);cursor:pointer;transition:background .15s,transform .15s}
+.chips button:hover{background:var(--fill);transform:translateY(-1px)}
+.chips button[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
+.rec{background:var(--accent-soft);border-radius:10px;padding:16px;display:grid;gap:4px}
+.rec p{margin:0}.recname{font:600 13px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink)}
+.fine{margin:0;color:var(--muted);font-size:14px}
+.bump{animation:bump .35s ease}
+@keyframes bump{0%{transform:translateY(6px);opacity:.2}100%{transform:none;opacity:1}}
+.js .rise{animation:rise .55s cubic-bezier(.2,.7,.2,1) both}
+.types .rise:nth-child(2){animation-delay:.08s}.types .rise:nth-child(3){animation-delay:.16s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.full{padding-bottom:clamp(32px,5vw,56px)}
+.fulllist summary{cursor:pointer;font-weight:600;padding:12px 0}
+.fulllist .tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel);margin:8px 0}
+.fulllist table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}.fulllist th,.fulllist td{border-bottom:1px solid var(--line);padding:10px 14px;text-align:left}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
