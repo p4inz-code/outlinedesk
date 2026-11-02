@@ -139,3 +139,11 @@ details p{margin:0 0 16px 20px;color:var(--muted)}
 .amt{font:600 28px/1.2 var(--mono);margin:0 0 8px;color:var(--text)}.amt span{font:400 14px var(--font);color:var(--muted)}
 .cta{text-align:center;padding:clamp(40px,6vw,80px) 0;border-top:1px solid var(--line)}
 .cta .lead{margin-inline:auto}.cta .actions{justify-content:center}
+
+/* real screenshots */
+.shot.real{margin:0 auto 48px}.shot.real picture,.gal picture{display:block}
+.shot.real img,.gal img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);background:var(--panel)}
+.shot.real figcaption,.gal figcaption{color:var(--muted);font-size:14px;margin-top:10px}
+.gallery{padding-bottom:clamp(40px,6vw,80px)}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px}
+.gal figure{margin:0}.gal .wide{grid-column:1 / -1}
