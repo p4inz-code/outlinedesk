@@ -4,7 +4,7 @@ Outlinedesk is a desktop production planner for animation, VFX and game studios.
 
 This repository is where you download Outlinedesk, read the guides and follow releases. The source code is private.
 
-Current version: 1.6.0, a release candidate for Windows and Linux. A Mac version is planned but does not exist yet.
+Current version: 1.6.0, a release candidate for Windows and Linux. macOS is not supported.
 
 ## Download
 
