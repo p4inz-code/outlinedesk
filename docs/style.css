@@ -99,8 +99,8 @@ nav a[aria-current="page"]{color:var(--text);font-weight:500;box-shadow:inset 0 
 .plan ul{padding:0;list-style:none;margin:16px 0;display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
 .plan li{padding-left:22px;position:relative}.plan li::before{content:"";position:absolute;left:2px;top:.55em;width:10px;height:5px;border-left:2px solid var(--done);border-bottom:2px solid var(--done);transform:rotate(-45deg)}
 .steps{padding-left:0;list-style:none;counter-reset:s;display:grid;gap:12px}
-.steps li{counter-increment:s;display:grid;grid-template-columns:32px 1fr;gap:12px}
-.steps li::before{content:counter(s);font:500 13px/28px var(--mono);width:28px;height:28px;text-align:center;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line-strong)}
+.steps li{counter-increment:s;position:relative;padding-left:44px;min-height:32px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;font:500 13px/28px var(--mono);width:28px;height:28px;text-align:center;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line-strong)}
 table{width:100%;border-collapse:collapse;font-size:15px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 th,td{text-align:left;vertical-align:top;padding:12px 14px;border-top:1px solid var(--line)}th{font-size:13px;color:var(--muted);font-weight:600;background:var(--fill);border-top:0}
 td:first-child{white-space:nowrap;font-weight:500}
