@@ -1,6 +1,6 @@
 # Frequently asked questions
 
-Does it need internet? No. The app works offline. The only network use is checking for updates and activating a licence.
+Does it need internet? No. The app works offline. The only network use is the optional update check, which you can turn off in Settings. A licence key is checked on your own computer, with no internet.
 
 Where is my data? In your project file or team folder on your storage. We never receive it.
 

@@ -54,7 +54,7 @@ To buy, email atharva.patil.cg@gmail.com with the plan you want. You pay by UPI 
 
 ## Privacy
 
-Project data stays on your computer. There is no telemetry and no account. The app uses the network for two things only, the licence check and the update check, and you can turn both off in Settings.
+Project data stays on your computer. There is no telemetry and no account. The only network use is the optional update check, and you can turn it off in Settings. Your licence key is checked on your own computer, so activation needs no internet.
 
 ## Guides
 
