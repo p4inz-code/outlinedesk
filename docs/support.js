@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var $ = function (s) { return document.getElementById(s); };
-  var q = $('sup-q'), count = $('sup-count'), faq = $('sup-faq');
+  var q = $('sup-q'), count = $('sup-count'), faq = $('sup-faq'), hint = count ? count.textContent : '';
   if (q && faq) {
     var items = [].slice.call(faq.querySelectorAll('details'));
     q.addEventListener('input', function () {
@@ -12,7 +12,10 @@
         d.hidden = !ok; if (ok) n++;
         if (words.length && ok) d.open = true; else if (!words.length) d.open = false;
       });
-      count.textContent = words.length ? (n ? n + ' of ' + items.length + ' answers match.' : 'Nothing matches. Use the email builder below and we will help.') : '';
+      count.textContent = words.length ? (n ? n + ' of ' + items.length + ' answers match.' : 'Nothing matches. Try one word, or use the email builder further down and we will help.') : hint;
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === '/' && !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName || '')) { e.preventDefault(); q.focus(); q.scrollIntoView({ block: 'center' }); }
     });
   }
   var sys = $('m-sys'), ver = $('m-ver'), what = $('m-what'), out = $('m-out'), copy = $('m-copy'), open = $('m-open');
