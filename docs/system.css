@@ -165,3 +165,30 @@
 .sx-acc summary::before{content:none;display:none}
 .sx-acc details>*:not(summary){margin:0;padding:0 var(--s7) var(--s4) 0}
 @media (min-width:901px){.sx-panels>*{grid-template-columns:minmax(0,.85fr) minmax(0,1.45fr)}}
+
+/* download page */
+.dl-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s5);margin-top:var(--s5)}
+@media (max-width:860px){.dl-grid{grid-template-columns:1fr}}
+.dl-card{display:flex;flex-direction:column;gap:var(--s4)}
+.dl-card.mine{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.dl-head{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);flex-wrap:wrap}
+.dl-head h2{margin:0;font-size:24px}
+.dl-facts{margin:0;display:grid;gap:var(--s2)}
+.dl-facts>div{display:grid;grid-template-columns:72px minmax(0,1fr);gap:var(--s3)}
+.dl-facts dt{color:var(--muted);font-size:14px}.dl-facts dd{margin:0;overflow-wrap:anywhere}
+.dl-sha{display:grid;gap:var(--s2)}
+.dl-sha .sx-code code{white-space:normal;overflow-wrap:anywhere;word-break:break-all;font-size:12px}
+.dl-card .sx-steps code,.sx-code code{font-family:var(--mono)}
+.dl-card .sx-steps li{color:var(--muted)}
+.dl-card .sx-steps code{background:var(--chrome);padding:1px 6px;border-radius:4px;color:var(--text);overflow-wrap:anywhere}
+.dl-list{margin:0 0 var(--s5);padding-left:var(--s5);display:grid;gap:var(--s2);color:var(--muted)}
+.hash-check{margin-top:var(--s5);max-width:760px}
+.hash-check .lab{display:block;font-weight:600;margin-bottom:var(--s2)}
+.hash-row{display:flex;gap:var(--s3);flex-wrap:wrap}
+.hash-in{flex:1 1 320px;min-width:0;min-height:44px;padding:0 var(--s4);border:1px solid var(--line-strong);border-radius:var(--r1);background:var(--panel);color:var(--text);font:400 14px var(--mono)}
+.hash-in:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.hash-result{margin-top:var(--s4)}
+.hash-result.ok{border-left-color:var(--done)}.hash-result.bad{border-left-color:var(--blocked)}
+.dl-grid>*,.hash-check,.sx-code{min-width:0}
+.sx-code{max-width:100%}
+[hidden]{display:none!important}
