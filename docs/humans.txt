@@ -1,0 +1,8 @@
+/* TEAM */
+Maker: Atharva Patil
+Studio: P4inz Interactive Labs, Navi Mumbai, India
+Site: https://atharvapatil.tech
+
+/* PRODUCT */
+Outlinedesk, offline production planner
+Site: https://p4inz-code.github.io/outlinedesk/

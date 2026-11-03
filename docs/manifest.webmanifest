@@ -1,0 +1,15 @@
+{
+  "name": "Outlinedesk",
+  "short_name": "Outlinedesk",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#1f5fd1",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
